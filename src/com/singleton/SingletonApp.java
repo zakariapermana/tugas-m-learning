@@ -12,25 +12,28 @@ import com.service.ServiceEnjoySport;
  * @author ZAKARIA
  */
 public class SingletonApp {
-    private static SingletonApp instance=null;
- 
- public SingletonApp(){
-     init();
- }
- public static SingletonApp getInstance(){
-     if(instance==null){
-         instance = new SingletonApp();
-     }
-     return instance;
- }
- 
- private ServiceEnjoySport serviceEnjoySport;
- 
- private void init(){
-     serviceEnjoySport = new ServiceEnjoySport();
- }
- 
- public ServiceEnjoySport getServiceEnjoySport(){
-     return serviceEnjoySport;
- }
+
+    private static SingletonApp instance = null;
+
+    public SingletonApp() {
+        init();
+    }
+
+    public static SingletonApp getInstance() {
+        if (instance == null) {
+            instance = new SingletonApp();
+        }
+        return instance;
+    }
+
+    private ServiceEnjoySport serviceEnjoySport;
+
+    private void init() {
+        serviceEnjoySport = new ServiceEnjoySport();
+    }
+
+    public ServiceEnjoySport getServiceEnjoySport() {
+        return serviceEnjoySport;
+    }
+
 }

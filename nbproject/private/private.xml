@@ -2,6 +2,13 @@
 <project-private xmlns="http://www.netbeans.org/ns/project-private/1">
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
-        <group/>
+        <group>
+            <file>file:/C:/NetBeansProjects/tugas-m-learning/src/com/model/EnjoySport.java</file>
+            <file>file:/C:/NetBeansProjects/tugas-m-learning/src/com/service/ServiceEnjoySport.java</file>
+            <file>file:/C:/NetBeansProjects/tugas-m-learning/src/com/dao/impl/DaoEnjoySport.java</file>
+            <file>file:/C:/NetBeansProjects/tugas-m-learning/src/com/singleton/SingletonApp.java</file>
+            <file>file:/C:/NetBeansProjects/tugas-m-learning/src/com/view/FindSAlgorithForm.java</file>
+            <file>file:/C:/NetBeansProjects/tugas-m-learning/src/com/dao/DaoApp.java</file>
+        </group>
     </open-files>
 </project-private>
