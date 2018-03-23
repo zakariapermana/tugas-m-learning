@@ -29,6 +29,8 @@ public class FindSAlgorithForm extends javax.swing.JFrame {
         labelResultQuestion.setVisible(false);
         labelResult.setVisible(false);
         HitungHypothesis.setVisible(false);
+        infoHipotesis.setVisible(false);
+        hasilHipotesis.setVisible(false);
         SingletonApp.getInstance().getServiceEnjoySport().init();
         setListEnjoySport(SingletonApp.getInstance().getServiceEnjoySport().getAll());
     }
@@ -71,6 +73,9 @@ public class FindSAlgorithForm extends javax.swing.JFrame {
         jPanel1 = new javax.swing.JPanel();
         labelResultQuestion = new javax.swing.JLabel();
         labelResult = new javax.swing.JLabel();
+        jPanel2 = new javax.swing.JPanel();
+        infoHipotesis = new javax.swing.JLabel();
+        hasilHipotesis = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Algoritma Find S");
@@ -271,26 +276,55 @@ public class FindSAlgorithForm extends javax.swing.JFrame {
                 .addContainerGap(77, Short.MAX_VALUE))
         );
 
+        infoHipotesis.setText("Berikut ini adalah hipotesis data training :");
+
+        hasilHipotesis.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+
+        javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
+        jPanel2.setLayout(jPanel2Layout);
+        jPanel2Layout.setHorizontalGroup(
+            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel2Layout.createSequentialGroup()
+                .addGap(46, 46, 46)
+                .addComponent(infoHipotesis)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(hasilHipotesis, javax.swing.GroupLayout.PREFERRED_SIZE, 326, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(48, 48, 48))
+        );
+        jPanel2Layout.setVerticalGroup(
+            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel2Layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(infoHipotesis)
+                .addGap(18, 18, 18)
+                .addComponent(hasilHipotesis, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+        );
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addGap(31, 31, 31)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                        .addComponent(jScrollPane2, javax.swing.GroupLayout.DEFAULT_SIZE, 813, Short.MAX_VALUE)
-                        .addGroup(layout.createSequentialGroup()
-                            .addComponent(TambahData)
-                            .addGap(18, 18, 18)
-                            .addComponent(UbahData)
-                            .addGap(18, 18, 18)
-                            .addComponent(HapusData)
-                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(CandElimData, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addComponent(PanelInput, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(jLabel4))
-                    .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                    .addGroup(layout.createSequentialGroup()
+                        .addComponent(jPanel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(jScrollPane2, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 813, Short.MAX_VALUE)
+                    .addGroup(javax.swing.GroupLayout.Alignment.LEADING, layout.createSequentialGroup()
+                        .addComponent(TambahData)
+                        .addGap(18, 18, 18)
+                        .addComponent(UbahData)
+                        .addGap(18, 18, 18)
+                        .addComponent(HapusData)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(CandElimData, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(PanelInput, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(jLabel4, javax.swing.GroupLayout.Alignment.LEADING))
                 .addContainerGap(36, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
@@ -309,7 +343,9 @@ public class FindSAlgorithForm extends javax.swing.JFrame {
                 .addGap(18, 18, 18)
                 .addComponent(PanelInput, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(jPanel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addContainerGap(58, Short.MAX_VALUE))
         );
 
@@ -338,6 +374,8 @@ public class FindSAlgorithForm extends javax.swing.JFrame {
         CheckEnjoySport.setSelected(false);
         labelResultQuestion.setVisible(false);
         labelResult.setVisible(false);
+        infoHipotesis.setVisible(false);
+        hasilHipotesis.setVisible(false);
     }
 
     private void SimpanDataActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_SimpanDataActionPerformed
@@ -535,9 +573,14 @@ public class FindSAlgorithForm extends javax.swing.JFrame {
             enjoy = false;
         }
         
+        String result = "< "+hipotesis.getSky()+", "+hipotesis.getAirTemp()+", "+hipotesis.getHumidity()+", "+hipotesis.getWind()+", "+hipotesis.getWater()+", "+hipotesis.getForecast()+" >";
+        
+        infoHipotesis.setVisible(true);
+        hasilHipotesis.setVisible(true);
         labelResultQuestion.setVisible(true);
         labelResult.setVisible(true);
         labelResult.setText(enjoy?"Yes":"No");
+        hasilHipotesis.setText(result);
     }//GEN-LAST:event_HitungHypothesisActionPerformed
 
     private void CandElimDataActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_CandElimDataActionPerformed
@@ -607,6 +650,8 @@ public class FindSAlgorithForm extends javax.swing.JFrame {
     private javax.swing.JTable TableEnjoySport;
     private javax.swing.JButton TambahData;
     private javax.swing.JButton UbahData;
+    private javax.swing.JLabel hasilHipotesis;
+    private javax.swing.JLabel infoHipotesis;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
@@ -617,6 +662,7 @@ public class FindSAlgorithForm extends javax.swing.JFrame {
     private javax.swing.JLabel jLabelEnjoy;
     private javax.swing.JLabel jLabelId;
     private javax.swing.JPanel jPanel1;
+    private javax.swing.JPanel jPanel2;
     private javax.swing.JScrollPane jScrollPane2;
     private javax.swing.JLabel labelResult;
     private javax.swing.JLabel labelResultQuestion;
