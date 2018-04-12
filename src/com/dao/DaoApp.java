@@ -5,6 +5,7 @@
  */
 package com.dao;
 
+import java.util.ArrayList;
 import java.util.List;
 
 /**
@@ -16,6 +17,6 @@ public interface DaoApp<T, ID> {
     public void save(T t);
     public void update(T t, ID id);
     public void delete(ID id);
-    public List<T> getAll();
+    public ArrayList<T> getAll();
     public T getById(ID id);
 }

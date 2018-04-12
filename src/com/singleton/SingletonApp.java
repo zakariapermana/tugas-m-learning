@@ -6,6 +6,9 @@
 package com.singleton;
 
 import com.service.ServiceEnjoySport;
+import com.service.ServiceHipertensi;
+import com.service.ServiceKegemukan;
+import com.service.ServiceUmur;
 
 /**
  *
@@ -27,13 +30,31 @@ public class SingletonApp {
     }
 
     private ServiceEnjoySport serviceEnjoySport;
+    private ServiceHipertensi serviceHipertensi;
+    private ServiceUmur serviceUmur;
+    private ServiceKegemukan serviceKegemukan;
 
     private void init() {
         serviceEnjoySport = new ServiceEnjoySport();
+        serviceHipertensi = new ServiceHipertensi();
+        serviceUmur = new ServiceUmur();
+        serviceKegemukan = new ServiceKegemukan();
     }
 
     public ServiceEnjoySport getServiceEnjoySport() {
         return serviceEnjoySport;
+    }
+    
+    public ServiceHipertensi getServiceHipertensi(){
+        return serviceHipertensi;
+    }
+    
+    public ServiceUmur getServiceUmur(){
+        return serviceUmur;
+    }
+    
+    public ServiceKegemukan getServiceKegemukan(){
+        return serviceKegemukan;
     }
 
 }
